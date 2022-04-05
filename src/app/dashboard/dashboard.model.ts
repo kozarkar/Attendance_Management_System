@@ -4,6 +4,6 @@ export class EmployeeModel{
     lastName : string = "";
     email : string = "";
     mobile : string = "";
-    department: string="";
+    departmentId: number= 0;
 
 }

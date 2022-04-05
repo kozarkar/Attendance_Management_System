@@ -33,4 +33,16 @@ export class ApiService {
       return res;
     }))
  }
+ getAllDepartments(){
+  return this.http.get<any>("http://localhost:3001/departments")
+  .pipe(map((res:any)=>{
+   return res;
+}))
+ }
+ getEmployeeByDepartmentId(id:any){
+  return this.http.get<any>("http://localhost:3001/posts?departmentId=" +id)
+  .pipe(map((res:any)=>{
+   return res;
+}))
+ }
 }

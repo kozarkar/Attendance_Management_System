@@ -68,7 +68,14 @@
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Department</label>
-                    <input type="text" formControlName="department" class="form-control" id="exampleInputPassword1">
+                    
+                      
+                      <mat-select class="form-control" formControlName="department" >
+                        <mat-option  *ngFor="let department of departmentData " [value]="department.id">
+                          {{department.name}}
+                        </mat-option>
+                      </mat-select>
+                    
 
                   </div>
               </form>

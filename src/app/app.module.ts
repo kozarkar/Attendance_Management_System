@@ -22,7 +22,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { AttendanceComponent } from './attendance/attendance.component';
 import { EmpSidenavbarComponent } from './emp-sidenavbar/emp-sidenavbar.component';
-
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule}  from '@angular/material/input';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
@@ -55,8 +56,11 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     MatButtonModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
-      useFactory: adapterFactory,
-    })
+      useFactory: adapterFactory
+    
+    }),
+    MatSelectModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

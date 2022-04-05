@@ -2,15 +2,15 @@
   "departments": [
     {
       "id": 1,
-      "name" : "IT - Unity"
+      "name": "IT - Unity"
     },
     {
       "id": 2,
-      "name" : "IT - Frontend"
+      "name": "IT - Frontend"
     },
     {
       "id": 3,
-      "name" : "IT - Backend"
+      "name": "IT - Backend"
     }
   ],
   "posts": [
@@ -85,7 +85,61 @@
       "email": "rajesh.raina@gmail.com",
       "mobile": "9988331234",
       "departmentId": 3
+    },
+    {
+      "id": 10,
+      "firstName": "Rakesh",
+      "lastName": "Kumar",
+      "email": "rakesh.kumar@gmail.com",
+      "mobile": "9876564554",
+      "departmentId": 3
+    },
+    {
+      "id": 11,
+      "firstName": "Amit",
+      "lastName": "Patel",
+      "email": "amit.patel@gmail.com",
+      "mobile": "9858754215",
+      "departmentId": 1
     }
+  ],
+  "attendance" :[
+    {
+      "id" : "1",
+      "status" : "present",
+      "departmentId" : 1,
+      "postId" : 1,
+      "date" : "April 1st, 2022"
+    },
+    {
+      "id" : "2",
+      "status" : "half day",
+      "departmentId" : 1,
+      "postId" : 1,
+      "date" : "April 2nd, 2022"
+    },
+    {
+      "id" : "3",
+      "status" : "absent",
+      "departmentId" : 1,
+      "postId" : 1,
+      "date" : "April 3rd, 2022"
+    },
+    {
+      "id" : "4",
+      "status" : "present",
+      "departmentId" : 1,
+      "postId" : 1,
+      "date" : "April 4th, 2022"
+    },
+    {
+      "id" : "5",
+      "status" : "present",
+      "departmentId" : 2,
+      "postId" : 2,
+      "date" : "April 1st, 2022"
+    }
+
   ],
   "signupUsers": [
     {
@@ -164,5 +218,4 @@
       "id": 2
     }
   ]
-  
 }
