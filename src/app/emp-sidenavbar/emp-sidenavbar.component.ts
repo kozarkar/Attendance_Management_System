@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Observable, shareReplay, map } from 'rxjs';
 import {BreakpointObserver,  Breakpoints}  from '@angular/cdk/layout'
 
+
+
 @Component({
   selector: 'app-sidenavbar',
   templateUrl: './emp-sidenavbar.component.html',
@@ -9,6 +11,7 @@ import {BreakpointObserver,  Breakpoints}  from '@angular/cdk/layout'
 })
 export class EmpSidenavbarComponent implements OnInit {
   
+  dropdownValue! : string;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
   .pipe(
@@ -21,7 +24,6 @@ export class EmpSidenavbarComponent implements OnInit {
 
    // console.log(localStorage.getItem('emp_email'));
   }
-  
   
   logOut(){
     localStorage.clear();

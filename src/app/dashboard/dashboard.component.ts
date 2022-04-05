@@ -13,6 +13,7 @@ export class DashboardComponent implements OnInit {
   formValue !: FormGroup;
   employeeModelObj : EmployeeModel = new EmployeeModel();
   employeeData ! : any;
+  departmentData ! : any;
   showAdd ! : boolean;
   showUpdate ! : boolean;
 
@@ -28,6 +29,7 @@ export class DashboardComponent implements OnInit {
       department : [''],
     })
     this.getAllEmployee();
+    this.getAllDepartments();
   }
     clickAddEmployee(){
       this.formValue.reset();
@@ -41,7 +43,7 @@ export class DashboardComponent implements OnInit {
       this.employeeModelObj.lastName = this.formValue.value.lastName;
       this.employeeModelObj.email = this.formValue.value.email;
       this.employeeModelObj.mobile = this.formValue.value.mobile;
-      this.employeeModelObj.department = this.formValue.value.department;
+      this.employeeModelObj.departmentId = this.formValue.value.department;
 
       this.api.postEmployee(this.employeeModelObj)
       .subscribe(res=>{
@@ -66,6 +68,14 @@ export class DashboardComponent implements OnInit {
         
       })
     }
+    getAllDepartments(){
+      this.api.getAllDepartments()
+      .subscribe((res:any)=>{
+        console.log(res);
+        this.departmentData = res;
+        
+      })
+    }
     deleteEmployee(row : any){
       this.api.deleteEmployee(row.id)
       .subscribe(res=>{
@@ -85,14 +95,14 @@ export class DashboardComponent implements OnInit {
       this.formValue.controls['lastName'].setValue(row.lastName);
       this.formValue.controls['email'].setValue(row.email);
       this.formValue.controls['mobile'].setValue(row.mobile);
-      this.formValue.controls['department'].setValue(row.department.name);
+      this.formValue.controls['department'].setValue(row.department.id);
     }
     updateEmployeeDetails(){
       this.employeeModelObj.firstName = this.formValue.value.firstName;
       this.employeeModelObj.lastName = this.formValue.value.lastName;
       this.employeeModelObj.email = this.formValue.value.email;
       this.employeeModelObj.mobile = this.formValue.value.mobile;
-      this.employeeModelObj.department = this.formValue.value.department;
+      this.employeeModelObj.departmentId = this.formValue.value.department;
 
       this.api.updateEmployee(this.employeeModelObj, this.employeeModelObj.id)
       .subscribe(res=>{
