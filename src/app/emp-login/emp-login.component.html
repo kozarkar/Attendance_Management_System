@@ -1,0 +1,34 @@
+<div>
+    <div  class = "bg">
+       
+
+    </div> 
+    <div class="row">
+        <div class="col-md-6" style="margin-top:10%;">
+
+            <div class="card">
+                <div class="text-center">
+                    <h1>Employee Login</h1>
+                    <h6>Please enter your email & password!!</h6>
+                </div>
+            
+                <form [formGroup]="emp_loginForm" (ngSubmit)="emp_login()">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                      <span class="text-danger" *ngIf="emp_loginForm.controls['email'].dirty && emp_loginForm.hasError('required','email')" > *Email ID is required!</span>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" required>
+                      <span class="text-danger" *ngIf="emp_loginForm.controls['password'].dirty && emp_loginForm.hasError('required','password')" > *Please enter your password</span>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary mb-1" [disabled]="!emp_loginForm.valid" >Login</button>
+                </form>  
+                    <a style="color: #fff; margin-top:10px;" routerLink="/emp_signup"> New Employee? Click here to Sign Up</a>
+                    <a style="color: #fff; margin-top:10px;" routerLink="/login">Team Lead Login</a>
+            </div>
+        </div>
+    </div>
+</div>

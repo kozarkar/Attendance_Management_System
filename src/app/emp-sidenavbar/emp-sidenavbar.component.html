@@ -1,0 +1,34 @@
+<mat-sidenav-container class="sidenav-container" >
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === false">
+    
+      <mat-nav-list>
+          <br>
+          <br>
+        <a mat-list-item ><i class="material-icons mainicon" style="background-color:azure;">tag_faces</i></a>
+        <br>
+        <hr>
+        <a mat-list-item routerLink="sidenavbar/"><i class="material-icons">supervised_user_circle</i>Employee Data</a>
+        <a mat-list-item  routerLink="../emp_dashboard"><i class="material-icons">calendar_today</i>Attendance</a>
+        
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+        >
+          <mat-icon aria-label="Side nav toggle icon">
+          </mat-icon>
+        </button>
+      
+        <button (click)="logOut()" routerLink="/login" class="btn btn-danger " style="margin-left:90%">Logout</button>
+       
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

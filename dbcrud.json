@@ -1,0 +1,168 @@
+{
+  "departments": [
+    {
+      "id": 1,
+      "name" : "IT - Unity"
+    },
+    {
+      "id": 2,
+      "name" : "IT - Frontend"
+    },
+    {
+      "id": 3,
+      "name" : "IT - Backend"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "firstName": "Rahul",
+      "lastName": "Shah",
+      "email": "rahul.shah@gmail.com",
+      "mobile": "8141467254",
+      "departmentId": 1
+    },
+    {
+      "id": 2,
+      "firstName": "Ramesh",
+      "lastName": "Shah",
+      "email": "ramesh.shah@gmail.com",
+      "mobile": "9141437858",
+      "departmentId": 2
+    },
+    {
+      "id": 3,
+      "firstName": "Sachin",
+      "lastName": "Tendulkar",
+      "email": "sachin.tendulkar@gmail.com",
+      "mobile": "8763543721",
+      "departmentId": 2
+    },
+    {
+      "id": 4,
+      "firstName": "Harsh",
+      "lastName": "Shah",
+      "email": "harsh.shah@gmail.com",
+      "mobile": "8767546754",
+      "departmentId": 2
+    },
+    {
+      "id": 5,
+      "firstName": "Ajeet",
+      "lastName": "Pandey",
+      "email": "ajeet.pandey@gmail.com",
+      "mobile": "9131443738",
+      "departmentId": 3
+    },
+    {
+      "id": 6,
+      "firstName": "Kshitij",
+      "lastName": "Ozarkar",
+      "email": "kshitij.ozarkar@gmail.com",
+      "mobile": "9323474859",
+      "departmentId": 2
+    },
+    {
+      "id": 7,
+      "firstName": "Pankaj",
+      "lastName": "Sharma",
+      "email": "pankaj.sharma@gmail.com",
+      "mobile": "9723457839",
+      "departmentId": 1
+    },
+    {
+      "id": 8,
+      "firstName": "Rajat",
+      "lastName": "Pandya",
+      "email": "rajat.pandya@gmail.com",
+      "mobile": "8393933939",
+      "departmentId": 1
+    },
+    {
+      "id": 9,
+      "firstName": "Rajesh",
+      "lastName": "Raina",
+      "email": "rajesh.raina@gmail.com",
+      "mobile": "9988331234",
+      "departmentId": 3
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "Ksh Oza",
+      "email": "ksoza@gmail.com",
+      "password": "ksoza",
+      "mobile": 9141437548,
+      "id": 1
+    },
+    {
+      "fullname": "Kshitij Ozarkar",
+      "email": "ksozarkar7@outlook.com",
+      "password": "ksozarkar",
+      "mobile": 9141456745,
+      "id": 2
+    },
+    {
+      "fullname": "testuser",
+      "email": "testuser@outlook.com",
+      "password": "testuser",
+      "mobile": 9898984534,
+      "id": 3
+    },
+    {
+      "fullname": "4343",
+      "email": "454545",
+      "password": "43434",
+      "mobile": 4343,
+      "id": 4
+    },
+    {
+      "fullname": "Virat K",
+      "email": "viratk@gmail.com",
+      "password": "viratk",
+      "mobile": 9898756545,
+      "id": 5
+    },
+    {
+      "fullname": "Admin",
+      "email": "employee@gmail.com",
+      "password": "employee",
+      "mobile": 9797869767,
+      "id": 6
+    },
+    {
+      "fullname": "testuser2",
+      "email": "testuser2@outlook.com",
+      "password": "testuser2",
+      "mobile": "9898757545",
+      "id": 7
+    },
+    {
+      "fullname": "abc pqr",
+      "email": "abcpqr@mail.com",
+      "password": "abcpqr",
+      "mobile": "9898787676",
+      "id": 8
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "emp_signupUsers": [
+    {
+      "fullname": "Test Employee",
+      "email": "testemployee@gmail.com",
+      "password": "testemp",
+      "mobile": 9141437548,
+      "id": 1
+    },
+    {
+      "fullname": "Emp Two",
+      "email": "emptwo@mail.com",
+      "password": "emptwo",
+      "mobile": "9893454353",
+      "id": 2
+    }
+  ]
+  
+}
