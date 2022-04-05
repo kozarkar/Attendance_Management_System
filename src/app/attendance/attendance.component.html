@@ -13,24 +13,50 @@
 <table class="table table-bordered">
     <thead>
         <tr>
+            <th scope="col">no</th>
             <th scope="col">Name</th>
             <th scope="col">Department</th>
+            <th scope="col">Date</th>
             <th scope="col">Action</th>
+            <th scope="col">Submit</th>
             
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let row of employeeData">
+            <td >{{row.id}}</td>
             <td>{{row.firstName + " " + row.lastName}}</td>
             <td>  
-                 <mat-select disabled class="form-control"  [value]="row.departmentId">
+                 <mat-select disabled class="form-control" [(value)]="row.departmentId" ngDefaultControl>
                 <mat-option  *ngFor="let department of departmentData " [value]="department.id">
                   {{department.name}}
                 </mat-option>
               </mat-select>
             </td>
             <td>
+                <mat-form-field color="accent" appearance="fill">
+                    <mat-label>Inherited calendar color</mat-label>
+                    <input matInput [matDatepicker]="picker1" [(ngModel)]="date" ngDefaultControl >
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                  </mat-form-field>
             </td>
+            <td>
+                <mat-radio-group
+                aria-labelledby="example-radio-group-label"
+                class="example-radio-group"
+                [(ngModel)]="status" ngDefaultControl
+                >
+                <mat-radio-button class="example-radio-button" *ngFor="let season of seasons"  [value]="season">
+                  {{season}}
+                </mat-radio-button>
+              </mat-radio-group>
+            </td>
+            <td> <button (click)="submit(row)" style="color:aliceblue;" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">submit</button></td>
         </tr>
     </tbody>
 </table>
+
+<!-- <div>
+    <button (click)="submit()" mat-raised-button color="primary">Submit</button>
+</div> -->

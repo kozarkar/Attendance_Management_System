@@ -45,4 +45,10 @@ export class ApiService {
    return res;
 }))
  }
+ postAttendance(data :any){
+  return this.http.post<any>("http://localhost:3001/attendance", data)
+  .pipe(map((res:any)=>{
+    return res;
+  }))
+} 
 }

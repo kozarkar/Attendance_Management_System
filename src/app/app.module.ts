@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import{MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule} from '@angular/material/form-field';
 import { EmpSignupComponent } from './emp-signup/emp-signup.component';
 import { EmpLoginComponent } from './emp-login/emp-login.component';
 import { EmpDashboardComponent } from './emp-dashboard/emp-dashboard.component';
@@ -26,7 +26,12 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule}  from '@angular/material/input';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
-
+import {MatRadioModule} from '@angular/material/radio';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule, MAT_DATE_FORMATS } from '@angular/material/core';
+import { FormsModule } from '@angular/forms';
+import { MatMomentDateModule } from "@angular/material-moment-adapter";
+import { MY_DATE_FORMATS } from './my-date-formats';
 
 @NgModule({
   declarations: [
@@ -60,9 +65,17 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     
     }),
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    FormsModule,
+    MatMomentDateModule
+    
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_DATE_FORMATS, useValue: MY_DATE_FORMATS}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

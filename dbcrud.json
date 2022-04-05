@@ -103,43 +103,56 @@
       "departmentId": 1
     }
   ],
-  "attendance" :[
+  "attendance": [
     {
-      "id" : "1",
-      "status" : "present",
-      "departmentId" : 1,
-      "postId" : 1,
-      "date" : "April 1st, 2022"
+      "status": "FullDay",
+      "date": "2022-03-31T18:30:00.000Z",
+      "departmentId": 1,
+      "postId": 7,
+      "id": 1
     },
     {
-      "id" : "2",
-      "status" : "half day",
-      "departmentId" : 1,
-      "postId" : 1,
-      "date" : "April 2nd, 2022"
+      "status": "HalfDay",
+      "date": "2022-04-02T18:30:00.000Z",
+      "departmentId": 2,
+      "postId": 2,
+      "id": 2
     },
     {
-      "id" : "3",
-      "status" : "absent",
-      "departmentId" : 1,
-      "postId" : 1,
-      "date" : "April 3rd, 2022"
+      "status": "FullDay",
+      "date": "2022-03-31T18:30:00.000Z",
+      "departmentId": 3,
+      "postId": 9,
+      "id": 3
     },
     {
-      "id" : "4",
-      "status" : "present",
-      "departmentId" : 1,
-      "postId" : 1,
-      "date" : "April 4th, 2022"
+      "status": "Absent",
+      "date": "2022-03-31T18:30:00.000Z",
+      "departmentId": 1,
+      "postId": 11,
+      "id": 4
     },
     {
-      "id" : "5",
-      "status" : "present",
-      "departmentId" : 2,
-      "postId" : 2,
-      "date" : "April 1st, 2022"
+      "status": "HalfDay",
+      "date": "2022-04-02T18:30:00.000Z",
+      "departmentId": 1,
+      "postId": 1,
+      "id": 5
+    },
+    {
+      "status": "Absent",
+      "date": "2022-04-02T18:30:00.000Z",
+      "departmentId": 3,
+      "postId": 10,
+      "id": 6
+    },
+    {
+      "status": "Absent",
+      "date": "2022-04-02T18:30:00.000Z",
+      "departmentId": 2,
+      "postId": 6,
+      "id": 7
     }
-
   ],
   "signupUsers": [
     {
