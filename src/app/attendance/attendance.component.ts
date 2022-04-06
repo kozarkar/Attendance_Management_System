@@ -1,6 +1,9 @@
 import { ApiService } from '../shared/api.service';
 import { Component, OnInit } from '@angular/core';
 import { attendance } from './attendance.model';
+import * as _moment from 'moment';
+
+const moment = _moment; 
 
 
 @Component({
@@ -9,7 +12,7 @@ import { attendance } from './attendance.model';
   styleUrls: ['./attendance.component.css']
 })
 export class AttendanceComponent implements OnInit {
-  
+  islist : boolean = false;
   departmentData! :any;
   data! :any;
   employeeData! : any;
@@ -20,7 +23,12 @@ export class AttendanceComponent implements OnInit {
   date!:Date;
   status!:string;
   departmentid!:number;
-  id!:number;
+  postid!:number;
+  defaultSelected:any;
+
+  
+
+
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
@@ -29,38 +37,37 @@ export class AttendanceComponent implements OnInit {
   getAllDepartments(){
     this.api.getAllDepartments()
     .subscribe((res:any)=>{
-      console.log(res);
+     // console.log(res);
       this.departmentData = res;
       
     })
   }
+  
     getData() {
-      console.log(this.data);
+      this.islist = true;
+      //console.log(this.data);
       this.api.getEmployeeByDepartmentId(this.data).subscribe((res:any)=>{
         this.employeeData=res;
-        console.log(this.employeeData);
-        this.getDepartmentName();
+        //console.log(this.employeeData);
       })
 
     }
-    getDepartmentName(){
-      if(this.data == this.departmentData.id){
-        console.log(this.name1 = this.departmentData.name);
-
-      }
-    }
-    submit(row:any){
-      //console.log(row.departmentId,row.id)
+    
+    submit(){
+      console.log(this.data,this.postid,this.status,this.date);
       let ds: attendance = new attendance();
       ds.status = this.status;
       ds.date = this.date;
-      ds.departmentId = row.departmentId;
-      ds.postId = row.id;
+      ds.departmentId = this.data;
+      ds.postId = this.postid;
       this.list_1.push(ds);
-      this.api.postAttendance(ds).subscribe((data:any)=>{
-        
-      })
+      this.api.postAttendance(ds).subscribe((data:any)=>{});
+      
+      this.status = '';
+      this.date = this.defaultSelected;
+      this.postid = this.defaultSelected;
+      }
     }
-  }
+  
 
 

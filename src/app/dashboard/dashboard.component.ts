@@ -63,7 +63,7 @@ export class DashboardComponent implements OnInit {
     getAllEmployee(){
       this.api.getEmployee()
       .subscribe((res:any)=>{
-        console.log(res);
+        //console.log(res);
         this.employeeData = res;
         
       })
@@ -71,7 +71,7 @@ export class DashboardComponent implements OnInit {
     getAllDepartments(){
       this.api.getAllDepartments()
       .subscribe((res:any)=>{
-        console.log(res);
+        //console.log(res);
         this.departmentData = res;
         
       })

@@ -1,0 +1,42 @@
+<div   class="card shadow-lg p-3 mb-5  rounded" style="width: 90%; margin-left: 5%; margin-right: 5%; margin-top: 3%;">
+    <div class="card-header">
+        <h1 style=" font-style:inherit;"><i class="fas fa-clipboard fa-3"></i><b style="color: green;">&nbsp;Attendance Records</b></h1>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered border-primary" style="margin-top: 5%;">
+            <tbody>
+            <tr class="table-secondary" style="font-size: 20px;">
+              <th>#</th>
+              <th style="width:20%;">Employee Name</th>
+              <th>Department</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+            <tr *ngFor="let item of list_1; let i = index" style="font-size: 17px;">
+              <td>{{i+1}}</td>
+              <td>
+                <select [(ngModel)]="item.postId" disabled style="border: none;" >
+                  <option *ngFor="let emp of employeeData " [value]="emp.id">{{emp.firstName}} {{emp.lastName}}</option>
+                </select>
+              </td>
+              <td>
+                <select [(ngModel)]="item.departmentId" disabled style="border: none;" >
+                  <option *ngFor="let department of departmentData" [value]="department.id">{{department.name}}</option>
+                </select>
+              </td>
+              <td>{{item.date}}</td>
+              <td>{{item.status}}</td>
+              <td>
+                <!-- <button class="btn btn-primary">
+                  <mat-icon (click)="onEditTable(item)">edit</mat-icon>
+                </button> |
+                <button class="btn btn-danger">
+                  <mat-icon (click)="onDeleteTable(item)">delete</mat-icon>
+                </button> -->
+              </td>
+            </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

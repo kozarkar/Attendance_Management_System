@@ -32,6 +32,17 @@ import { MatNativeDateModule, MAT_DATE_FORMATS } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { MatMomentDateModule } from "@angular/material-moment-adapter";
 import { MY_DATE_FORMATS } from './my-date-formats';
+import { AttendanceRecordsComponent, DefaultPipe } from './attendance-records/attendance-records.component';
+
+import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
+import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
+import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
+
+FullCalendarModule.registerPlugins([ // register FullCalendar plugins
+  dayGridPlugin,
+  interactionPlugin
+]);
+
 
 @NgModule({
   declarations: [
@@ -44,7 +55,9 @@ import { MY_DATE_FORMATS } from './my-date-formats';
     EmpDashboardComponent,
     SidenavbarComponent,
     AttendanceComponent,
-    EmpSidenavbarComponent
+    EmpSidenavbarComponent,
+    AttendanceRecordsComponent,
+    DefaultPipe
   ],
   imports: [
     BrowserModule,
@@ -70,7 +83,8 @@ import { MY_DATE_FORMATS } from './my-date-formats';
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
-    MatMomentDateModule
+    MatMomentDateModule,
+    FullCalendarModule
     
   ],
   providers: [

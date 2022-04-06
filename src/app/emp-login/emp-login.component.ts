@@ -22,14 +22,16 @@ export class EmpLoginComponent implements OnInit {
   }
 
   emp_login(){
-    this.http.get<any>("http://localhost:3001/emp_signUpusers")
+    this.http.get<any>("http://localhost:3001/posts")
     .subscribe(res=>{
       const user = res.find((a:any)=>{
-        return a.email === this.emp_loginForm.value.email && a.password === this.emp_loginForm.value.password
+        console.log(a);
+        return a.email === this.emp_loginForm.value.email && a.mobile === this.emp_loginForm.value.password
       });
       if(user){
         localStorage.setItem('emp_email', this.emp_loginForm.get('email')?.value);
-    
+        console.log(user.id);
+        localStorage.setItem('emp.id',user.id);
 
         this.emp_loginForm.reset();
         this.router.navigate(['emp_sidenavbar/'])

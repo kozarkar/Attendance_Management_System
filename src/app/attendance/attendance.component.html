@@ -1,4 +1,4 @@
-<div class="mb-3">
+<!-- <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Department</label>
    <mat-select class="form-control"  [(value)]="data">
         <mat-option #data *ngFor="let department of departmentData " [value]="department.id">
@@ -34,12 +34,7 @@
               </mat-select>
             </td>
             <td>
-                <mat-form-field color="accent" appearance="fill">
-                    <mat-label>Inherited calendar color</mat-label>
-                    <input matInput [matDatepicker]="picker1" [(ngModel)]="date" ngDefaultControl >
-                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                    <mat-datepicker #picker1></mat-datepicker>
-                  </mat-form-field>
+                <input type="date" [(ngModel)]="date">
             </td>
             <td>
                 <mat-radio-group
@@ -55,8 +50,134 @@
             <td> <button (click)="submit(row)" style="color:aliceblue;" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">submit</button></td>
         </tr>
     </tbody>
-</table>
+</table> -->
 
-<!-- <div>
-    <button (click)="submit()" mat-raised-button color="primary">Submit</button>
-</div> -->
+
+<div   class="card shadow-lg p-3 mb-5  rounded" style="width: 90%; margin-left: 5%; margin-right: 5%; margin-top: 3%;">
+  <div class="card-header">
+      <h1 style=" font-style:inherit;"><i class="fas fa-clipboard fa-3"></i><b style="color: green;">&nbsp;Diet Standard</b></h1>
+  </div>
+  <div class="card-body">
+    <div class="row col-md-12">
+      <div class="col-md-5">
+        <div>
+          <tr>
+            <td colspan="4" style="width: 40%;">
+              <label ><b>Department :</b></label>
+            </td>
+            <td >
+              <select class="form-select" [(ngModel)]="data" style="width: 130%; font-size: 15px;  margin-left: 15%; margin-top: 5%;  border: 1px solid black;">
+                <option [value]="undefined" selected  style="text-align: center;" >--Select --</option>
+                <br>
+                <option *ngFor="let department of departmentData " [value]="department.id">{{department.name}}</option>
+              </select>
+            </td>
+            <td>
+              <button (click)="getData()" style="margin-left: 140%;height: 25px; color: #212529;background-color: #ffc107;border-color: #ffc107;">Select</button>
+            </td>
+          </tr>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-5" *ngIf = "islist" >
+      <div class="card shadow-lg p-3 mb-5  rounded" style="width:100%; margin-left:-5%; margin-top: 2%;background-color:rgb(243, 242, 242);">
+        <div class="card-body">
+          <div> 
+            <tr>
+              <td colspan="4" style="width: 40%;">
+                <label ><b>Employee :</b></label>
+              </td>
+              <td>
+                <select class="form-select" [(ngModel)]="postid" style="width: 130%; font-size: 15px;  margin-left: 15%; margin-top: 5%;  border: 1px solid black;">
+                  <option [value]="undefined" selected  style="text-align: center;" >--Select --</option>
+                  <br>
+                  <option *ngFor="let emp of employeeData " [value]="emp.id">{{emp.firstName}} {{emp.lastName}}</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="4" style="width: 40%;">
+                <label ><b>Department :</b></label>
+              </td>
+              <td >
+                <select class="form-select" disabled [(ngModel)]="data" style="width: 130%; font-size: 15px;  margin-left: 15%; margin-top: 5%;  border: 1px solid black;">
+                  <option [value]="undefined" selected  style="text-align: center;" >--Select --</option>
+                  <br>
+                  <option *ngFor="let department of departmentData" [value]="department.id">{{department.name}}</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="4" style="width: 40%;">
+                <label ><b>Date :</b></label>
+              </td>
+              <td >
+                <input type="date" [(ngModel)]="date">
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="4" style="width: 40%;">
+                <label ><b>Status :</b></label>
+              </td>
+              <td>
+                <mat-radio-group
+                aria-labelledby="example-radio-group-label"
+                class="example-radio-group"
+                [(ngModel)]="status" ngDefaultControl
+                >
+                <mat-radio-button class="example-radio-button" *ngFor="let season of seasons"  [value]="season">
+                  {{season}}
+                </mat-radio-button>
+              </mat-radio-group>
+              </td>
+            </tr>
+
+          </div>
+          <button  (click)="submit()" style="margin-left: 70%;margin-top: 3%;padding-left: 10%; padding-right: 10%;" class="btn btn-primary">Add</button>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div>
+    <table class="table table-bordered border-primary" style="margin-top: 5%;">
+      <tbody>
+      <tr class="table-secondary" style="font-size: 20px;">
+        <th>#</th>
+        <th style="width:20%;">Employee Name</th>
+        <th>Department</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let item of list_1; let i = index" style="font-size: 17px;">
+        <td>{{i+1}}</td>
+        <td>
+          <select [(ngModel)]="item.postId" disabled style="border: none;" >
+            <option *ngFor="let emp of employeeData " [value]="emp.id">{{emp.firstName}} {{emp.lastName}}</option>
+          </select>
+        </td>
+        <td>
+          <select [(ngModel)]="item.departmentId" disabled style="border: none;" >
+            <option *ngFor="let department of departmentData" [value]="department.id">{{department.name}}</option>
+          </select>
+        </td>
+        <td>{{item.date}}</td>
+        <td>{{item.status}}</td>
+        <td>
+          <!-- <button class="btn btn-primary">
+            <mat-icon (click)="onEditTable(item)">edit</mat-icon>
+          </button> |
+          <button class="btn btn-danger">
+            <mat-icon (click)="onDeleteTable(item)">delete</mat-icon>
+          </button> -->
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    </div> 
+    
+  </div>
+</div>

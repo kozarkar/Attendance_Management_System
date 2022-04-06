@@ -45,10 +45,22 @@ export class ApiService {
    return res;
 }))
  }
+ getAllAttendance(){
+  return this.http.get<any>("http://localhost:3001/attendance")
+  .pipe(map((res:any)=>{
+   return res;
+}))
+ }
  postAttendance(data :any){
   return this.http.post<any>("http://localhost:3001/attendance", data)
   .pipe(map((res:any)=>{
     return res;
   }))
 } 
+getAttendanceByEmpId(id:any){
+  return this.http.get<any>("http://localhost:3001/attendance?postId="+id)
+  .pipe(map((res:any)=>{
+   return res;
+}))
+ }
 }

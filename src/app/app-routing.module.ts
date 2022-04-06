@@ -11,6 +11,7 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AttendanceRecordsComponent } from './attendance-records/attendance-records.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'login', pathMatch:'full'},
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'sidenavbar', component:SidenavbarComponent, canActivate:[AuthGuard], children:[
     {path: '', redirectTo:'dashboard', pathMatch:'full'},
     {path:'dashboard', component:DashboardComponent},
-    {path: 'attendance', component:AttendanceComponent}
+    {path: 'attendance', component:AttendanceComponent},
+    {path: 'attendancerecords',component:AttendanceRecordsComponent}
   ]},
   {path: 'emp_login', component:EmpLoginComponent},
   {path: 'emp_signup', component:EmpSignupComponent},
