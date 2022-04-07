@@ -12,7 +12,7 @@ import {BreakpointObserver,  Breakpoints}  from '@angular/cdk/layout'
 export class EmpSidenavbarComponent implements OnInit {
   
   dropdownValue! : string;
-
+  email:any;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
   .pipe(
     map(result => result.matches),
@@ -22,7 +22,7 @@ export class EmpSidenavbarComponent implements OnInit {
 
   ngOnInit(): void {
 
-   // console.log(localStorage.getItem('emp_email'));
+   this.email=localStorage.getItem('emp_email');
   }
   
   logOut(){

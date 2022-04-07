@@ -8,7 +8,7 @@ import {BreakpointObserver,  Breakpoints}  from '@angular/cdk/layout'
   styleUrls: ['./sidenavbar.component.css']
 })
 export class SidenavbarComponent implements OnInit {
-  
+  email:any;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
   .pipe(
@@ -18,6 +18,7 @@ export class SidenavbarComponent implements OnInit {
   constructor(private breakpointObserver : BreakpointObserver) { }
 
   ngOnInit(): void {
+    this.email = localStorage.getItem('email_id');
   }
 
   

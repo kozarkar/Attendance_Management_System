@@ -34,14 +34,14 @@ import { MatMomentDateModule } from "@angular/material-moment-adapter";
 import { MY_DATE_FORMATS } from './my-date-formats';
 import { AttendanceRecordsComponent, DefaultPipe } from './attendance-records/attendance-records.component';
 
-import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
-import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
-import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
 
-FullCalendarModule.registerPlugins([ // register FullCalendar plugins
-  dayGridPlugin,
-  interactionPlugin
-]);
+import {NgxEventCalendarModule} from 'ngx-event-calendar';
+
+
+import {MatDividerModule} from '@angular/material/divider';
+
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 
 @NgModule({
@@ -72,11 +72,7 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     MatListModule,
     MatToolbarModule,
     MatButtonModule,
-    CalendarModule.forRoot({
-      provide: DateAdapter,
-      useFactory: adapterFactory
     
-    }),
     MatSelectModule,
     MatInputModule,
     MatRadioModule,
@@ -84,7 +80,11 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     MatNativeDateModule,
     FormsModule,
     MatMomentDateModule,
-    FullCalendarModule
+    NgxEventCalendarModule,
+    MatDividerModule,
+    FlexLayoutModule
+
+    
     
   ],
   providers: [

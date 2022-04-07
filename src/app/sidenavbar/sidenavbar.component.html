@@ -26,8 +26,8 @@
           <mat-icon aria-label="Side nav toggle icon">
           </mat-icon>
         </button>
-      
-        <button (click)="logOut()" routerLink="/login" class="btn btn-danger " style="margin-left:90%">Logout</button>
+        <span>{{email}}</span>
+        <button (click)="logOut()" routerLink="/login" class="btn btn-danger " style="margin-left:70%">Logout</button>
        
       </mat-toolbar>
       <router-outlet></router-outlet>

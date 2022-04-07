@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../shared/api.service';
-import { CalendarOptions } from '@fullcalendar/angular';
+import { date1 } from './date1.model';
 
 @Component({
   selector: 'app-emp-dashboard',
@@ -19,30 +19,27 @@ export class EmpDashboardComponent implements OnInit {
     this.api.getAttendanceByEmpId(this.empid).subscribe((res:any)=>{
       this.list_1 = res;
       //console.log(res);
-      for (var val of this.list_1) {
-        this.listdate.push(val.date);
-         // prints values: 10, 20, 30, 40
+      for (var item of this.list_1) {
+        const ds : any = new date1();
+          ds.id = item.id;
+          ds.title = item.status;
+          ds.startDate = new Date(item.date);
+          ds.endDate = new Date(item.date);
+          ds.color = "green";
+          this.listdate.push(ds);
+         
       } 
       console.log(this.listdate); 
     })
   }
 
-  calendarOptions: CalendarOptions = {
-    initialView: 'dayGridMonth',
-    weekends: true,
-    
-    
-    events: [
-      
-      { title: '', date: this.listdate },
-    ]
-  };
-   
-  
+  dataArray: any = this.listdate;
 
-  toggleWeekends() {
-    this.calendarOptions.weekends = !this.calendarOptions.weekends
+  selectDay(event:any) {
+    console.log(event);
   }
+
+  
 
   
 

@@ -28,11 +28,35 @@ export class LoginComponent implements OnInit {
         return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password
       });
       if(user){
-        localStorage.setItem('email', this.loginForm.get('email')?.value);
+        localStorage.setItem('email_id', this.loginForm.get('email')?.value);
     
 
         this.loginForm.reset();
         this.router.navigate(['sidenavbar/'])
+      }else{
+        this.emp_login();
+      }
+    },err=>{
+      alert("Something went wrong");
+    })
+    if(this.loginForm.valid){}
+  }
+
+  emp_login(){
+    this.http.get<any>("http://localhost:3001/posts")
+    .subscribe(res=>{
+      const user = res.find((a:any)=>{
+        //console.log(a);
+        return a.email === this.loginForm.value.email && a.mobile === this.loginForm.value.password
+      });
+      if(user){
+        localStorage.setItem('emp_email', this.loginForm.get('email')?.value);
+        //console.log(user.id);
+        //console.log(user.firstName);
+        localStorage.setItem('emp.id',user.id);
+
+        this.loginForm.reset();
+        this.router.navigate(['emp_sidenavbar/'])
       }else{
         alert("User not found!!");
       }

@@ -23,7 +23,6 @@ const routes: Routes = [
     {path: 'attendance', component:AttendanceComponent},
     {path: 'attendancerecords',component:AttendanceRecordsComponent}
   ]},
-  {path: 'emp_login', component:EmpLoginComponent},
   {path: 'emp_signup', component:EmpSignupComponent},
   {path: 'emp_sidenavbar', component:EmpSidenavbarComponent, canActivate:[AuthGuard], children:[
     {path: '', component:EmpDashboardComponent}

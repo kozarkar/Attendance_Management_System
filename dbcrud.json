@@ -154,11 +154,25 @@
       "id": 7
     },
     {
+      "status": "FullDay",
+      "date": "2022-04-07",
+      "departmentId": "1",
+      "postId": "7",
+      "id": 9
+    },
+    {
       "status": "Absent",
       "date": "2022-04-06",
       "departmentId": "3",
       "postId": "5",
-      "id": 8
+      "id": 10
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-07",
+      "departmentId": "3",
+      "postId": "5",
+      "id": 11
     }
   ],
   "signupUsers": [
