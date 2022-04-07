@@ -3,7 +3,7 @@ import { EmpSidenavbarComponent } from './emp-sidenavbar/emp-sidenavbar.componen
 import { SidenavbarComponent } from './sidenavbar/sidenavbar.component';
 import { EmpDashboardComponent } from './emp-dashboard/emp-dashboard.component';
 import { EmpSignupComponent } from './emp-signup/emp-signup.component';
-import { EmpLoginComponent } from './emp-login/emp-login.component';
+
 import { AuthGuard } from './shared/auth.guard';
 import { AuthService } from './shared/auth.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
