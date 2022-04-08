@@ -20,7 +20,8 @@ export class EmpDashboardComponent implements OnInit {
       this.list_1 = res;
       //console.log(res);
       for (var item of this.list_1) {
-        const ds : any = new date1();
+        if(item.status == "FullDay"){
+          const ds : any = new date1();
           ds.id = item.id;
           ds.title = item.status;
           ds.startDate = new Date(item.date);
@@ -28,6 +29,26 @@ export class EmpDashboardComponent implements OnInit {
           ds.color = "green";
           this.listdate.push(ds);
          
+        } else if(item.status == "HalfDay"){
+
+          const ds : any = new date1();
+          ds.id = item.id;
+          ds.title = item.status;
+          ds.startDate = new Date(item.date);
+          ds.endDate = new Date(item.date);
+          ds.color = "blue";
+          this.listdate.push(ds);
+        } else {
+          const ds : any = new date1();
+          ds.id = item.id;
+          ds.title = item.status;
+          ds.startDate = new Date(item.date);
+          ds.endDate = new Date(item.date);
+          ds.color = "red";
+          this.listdate.push(ds);
+        }
+
+       
       } 
       console.log(this.listdate); 
     })

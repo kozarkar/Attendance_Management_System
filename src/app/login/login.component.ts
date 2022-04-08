@@ -24,14 +24,18 @@ export class LoginComponent implements OnInit {
   login(){
     this.http.get<any>("http://localhost:3001/signUpusers")
     .subscribe(res=>{
+      console.log(res);
       const user = res.find((a:any)=>{
-        return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password
+        
+        return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password;
+        
       });
       if(user){
         localStorage.setItem('email_id', this.loginForm.get('email')?.value);
     
 
         this.loginForm.reset();
+        //alert("Reset complete");
         this.router.navigate(['sidenavbar/'])
       }else{
         this.emp_login();

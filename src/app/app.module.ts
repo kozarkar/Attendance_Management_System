@@ -24,8 +24,6 @@ import { AttendanceComponent } from './attendance/attendance.component';
 import { EmpSidenavbarComponent } from './emp-sidenavbar/emp-sidenavbar.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule}  from '@angular/material/input';
-import { CalendarModule, DateAdapter } from 'angular-calendar';
-import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule, MAT_DATE_FORMATS } from '@angular/material/core';

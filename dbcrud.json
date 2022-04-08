@@ -173,64 +173,134 @@
       "departmentId": "3",
       "postId": "5",
       "id": 11
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-08",
+      "departmentId": "1",
+      "postId": "1",
+      "id": 12
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-08",
+      "departmentId": "1",
+      "postId": "7",
+      "id": 13
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-08",
+      "departmentId": "1",
+      "postId": "8",
+      "id": 14
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-08",
+      "departmentId": "1",
+      "postId": "11",
+      "id": 15
+    },
+    {
+      "status": "HalfDay",
+      "date": "2022-04-08",
+      "departmentId": "2",
+      "postId": "2",
+      "id": 16
+    },
+    {
+      "status": "Absent",
+      "date": "2022-04-08",
+      "departmentId": "2",
+      "postId": "3",
+      "id": 17
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-08",
+      "departmentId": "2",
+      "postId": "4",
+      "id": 18
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-08",
+      "departmentId": "2",
+      "postId": "6",
+      "id": 19
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-08",
+      "departmentId": "3",
+      "postId": "5",
+      "id": 20
+    },
+    {
+      "status": "HalfDay",
+      "date": "2022-04-08",
+      "departmentId": "3",
+      "postId": "9",
+      "id": 21
+    },
+    {
+      "status": "Absent",
+      "date": "2022-04-08",
+      "departmentId": "3",
+      "postId": "10",
+      "id": 22
+    },
+    {
+      "status": "HalfDay",
+      "date": "2022-04-07",
+      "departmentId": "2",
+      "postId": "4",
+      "id": 23
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-01",
+      "departmentId": "2",
+      "postId": "4",
+      "id": 26
+    },
+    {
+      "status": "HalfDay",
+      "date": "2022-04-02",
+      "departmentId": "2",
+      "postId": "4",
+      "id": 27
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-03-31",
+      "departmentId": "2",
+      "postId": "4",
+      "id": 28
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-04",
+      "departmentId": "2",
+      "postId": "4",
+      "id": 29
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-05",
+      "departmentId": "2",
+      "postId": "4",
+      "id": 30
     }
   ],
   "signupUsers": [
     {
-      "fullname": "Ksh Oza",
-      "email": "ksoza@gmail.com",
-      "password": "ksoza",
-      "mobile": 9141437548,
+      "fullname": "teamlead1",
+      "email": "teamlead1@gmail.com",
+      "password": "teamlead1",
+      "mobile": "8767564543",
       "id": 1
-    },
-    {
-      "fullname": "Kshitij Ozarkar",
-      "email": "ksozarkar7@outlook.com",
-      "password": "ksozarkar",
-      "mobile": 9141456745,
-      "id": 2
-    },
-    {
-      "fullname": "testuser",
-      "email": "testuser@outlook.com",
-      "password": "testuser",
-      "mobile": 9898984534,
-      "id": 3
-    },
-    {
-      "fullname": "4343",
-      "email": "454545",
-      "password": "43434",
-      "mobile": 4343,
-      "id": 4
-    },
-    {
-      "fullname": "Virat K",
-      "email": "viratk@gmail.com",
-      "password": "viratk",
-      "mobile": 9898756545,
-      "id": 5
-    },
-    {
-      "fullname": "Admin",
-      "email": "employee@gmail.com",
-      "password": "employee",
-      "mobile": 9797869767,
-      "id": 6
-    },
-    {
-      "fullname": "testuser2",
-      "email": "testuser2@outlook.com",
-      "password": "testuser2",
-      "mobile": "9898757545",
-      "id": 7
-    },
-    {
-      "fullname": "abc pqr",
-      "email": "abcpqr@mail.com",
-      "password": "abcpqr",
-      "mobile": "9898787676",
-      "id": 8
     }
   ],
   "profile": {

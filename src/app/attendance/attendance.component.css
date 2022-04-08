@@ -8,3 +8,11 @@
   .example-radio-button {
     margin: 5px;
   }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    font-weight:500;
+    color: black;
+  }
