@@ -1,0 +1,325 @@
+{
+  "departments": [
+    {
+      "id": 1,
+      "name": "IT - Unity"
+    },
+    {
+      "id": 2,
+      "name": "IT - Frontend"
+    },
+    {
+      "id": 3,
+      "name": "IT - Backend"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "firstName": "Rahul",
+      "lastName": "Shah",
+      "email": "rahul.shah@gmail.com",
+      "mobile": "8141467254",
+      "departmentId": 1
+    },
+    {
+      "id": 2,
+      "firstName": "Ramesh",
+      "lastName": "Shah",
+      "email": "ramesh.shah@gmail.com",
+      "mobile": "9141437858",
+      "departmentId": 2
+    },
+    {
+      "id": 3,
+      "firstName": "Sachin",
+      "lastName": "Tendulkar",
+      "email": "sachin.tendulkar@gmail.com",
+      "mobile": "8763543721",
+      "departmentId": 2
+    },
+    {
+      "id": 4,
+      "firstName": "Harsh",
+      "lastName": "Shah",
+      "email": "harsh.shah@gmail.com",
+      "mobile": "8767546754",
+      "departmentId": 2
+    },
+    {
+      "id": 5,
+      "firstName": "Ajeet",
+      "lastName": "Pandey",
+      "email": "ajeet.pandey@gmail.com",
+      "mobile": "9131443738",
+      "departmentId": 3
+    },
+    {
+      "id": 6,
+      "firstName": "Kshitij",
+      "lastName": "Ozarkar",
+      "email": "kshitij.ozarkar@gmail.com",
+      "mobile": "9323474859",
+      "departmentId": 2
+    },
+    {
+      "id": 7,
+      "firstName": "Pankaj",
+      "lastName": "Sharma",
+      "email": "pankaj.sharma@gmail.com",
+      "mobile": "9723457839",
+      "departmentId": 1
+    },
+    {
+      "id": 8,
+      "firstName": "Rajat",
+      "lastName": "Pandya",
+      "email": "rajat.pandya@gmail.com",
+      "mobile": "8393933939",
+      "departmentId": 1
+    },
+    {
+      "id": 9,
+      "firstName": "Rajesh",
+      "lastName": "Raina",
+      "email": "rajesh.raina@gmail.com",
+      "mobile": "9988331234",
+      "departmentId": 3
+    },
+    {
+      "id": 10,
+      "firstName": "Rakesh",
+      "lastName": "Kumar",
+      "email": "rakesh.kumar@gmail.com",
+      "mobile": "9876564554",
+      "departmentId": 3
+    },
+    {
+      "id": 11,
+      "firstName": "Amit",
+      "lastName": "Patel",
+      "email": "amit.patel@gmail.com",
+      "mobile": "9858754215",
+      "departmentId": 1
+    }
+  ],
+  "attendance": [
+    {
+      "status": "FullDay",
+      "date": "2022-04-06",
+      "departmentId": "2",
+      "postId": "4",
+      "id": 1
+    },
+    {
+      "status": "Absent",
+      "date": "2022-04-06",
+      "departmentId": "2",
+      "postId": "3",
+      "id": 2
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-01",
+      "departmentId": "1",
+      "postId": "1",
+      "id": 3
+    },
+    {
+      "status": "HalfDay",
+      "date": "2022-04-02",
+      "departmentId": "1",
+      "postId": "1",
+      "id": 4
+    },
+    {
+      "status": "Absent",
+      "date": "2022-04-04",
+      "departmentId": "1",
+      "postId": "1",
+      "id": 5
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-06",
+      "departmentId": "1",
+      "postId": "1",
+      "id": 6
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-06",
+      "departmentId": "2",
+      "postId": "6",
+      "id": 7
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-07",
+      "departmentId": "1",
+      "postId": "7",
+      "id": 9
+    },
+    {
+      "status": "Absent",
+      "date": "2022-04-06",
+      "departmentId": "3",
+      "postId": "5",
+      "id": 10
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-07",
+      "departmentId": "3",
+      "postId": "5",
+      "id": 11
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-08",
+      "departmentId": "1",
+      "postId": "1",
+      "id": 12
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-08",
+      "departmentId": "1",
+      "postId": "7",
+      "id": 13
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-08",
+      "departmentId": "1",
+      "postId": "8",
+      "id": 14
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-08",
+      "departmentId": "1",
+      "postId": "11",
+      "id": 15
+    },
+    {
+      "status": "HalfDay",
+      "date": "2022-04-08",
+      "departmentId": "2",
+      "postId": "2",
+      "id": 16
+    },
+    {
+      "status": "Absent",
+      "date": "2022-04-08",
+      "departmentId": "2",
+      "postId": "3",
+      "id": 17
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-08",
+      "departmentId": "2",
+      "postId": "4",
+      "id": 18
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-08",
+      "departmentId": "2",
+      "postId": "6",
+      "id": 19
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-08",
+      "departmentId": "3",
+      "postId": "5",
+      "id": 20
+    },
+    {
+      "status": "HalfDay",
+      "date": "2022-04-08",
+      "departmentId": "3",
+      "postId": "9",
+      "id": 21
+    },
+    {
+      "status": "Absent",
+      "date": "2022-04-08",
+      "departmentId": "3",
+      "postId": "10",
+      "id": 22
+    },
+    {
+      "status": "HalfDay",
+      "date": "2022-04-07",
+      "departmentId": "2",
+      "postId": "4",
+      "id": 23
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-01",
+      "departmentId": "2",
+      "postId": "4",
+      "id": 26
+    },
+    {
+      "status": "HalfDay",
+      "date": "2022-04-02",
+      "departmentId": "2",
+      "postId": "4",
+      "id": 27
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-03-31",
+      "departmentId": "2",
+      "postId": "4",
+      "id": 28
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-04",
+      "departmentId": "2",
+      "postId": "4",
+      "id": 29
+    },
+    {
+      "status": "FullDay",
+      "date": "2022-04-05",
+      "departmentId": "2",
+      "postId": "4",
+      "id": 30
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "teamlead1",
+      "email": "teamlead1@gmail.com",
+      "password": "teamlead1",
+      "mobile": "8767564543",
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "emp_signupUsers": [
+    {
+      "fullname": "Test Employee",
+      "email": "testemployee@gmail.com",
+      "password": "testemp",
+      "mobile": 9141437548,
+      "id": 1
+    },
+    {
+      "fullname": "Emp Two",
+      "email": "emptwo@mail.com",
+      "password": "emptwo",
+      "mobile": "9893454353",
+      "id": 2
+    }
+  ]
+}
