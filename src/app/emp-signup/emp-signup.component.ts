@@ -22,7 +22,7 @@ export class EmpSignupComponent implements OnInit {
     })
   }
   emp_signUp(){
-    this.http.post<any>("http://localhost:3001/emp_signupUsers", this.emp_signupForm.value)
+    this.http.post<any>("http://localhost:3002/emp_signupUsers", this.emp_signupForm.value)
     .subscribe(res=>{
       alert("sign up successfull!");
       this.emp_signupForm.reset();

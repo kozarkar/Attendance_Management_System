@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    this.http.get<any>("http://localhost:3001/signUpusers")
+    this.http.get<any>("http://localhost:3002/signUpusers")
     .subscribe(res=>{
       console.log(res);
       const user = res.find((a:any)=>{
@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
   }
 
   emp_login(){
-    this.http.get<any>("http://localhost:3001/posts")
+    this.http.get<any>("http://localhost:3002/posts")
     .subscribe(res=>{
       const user = res.find((a:any)=>{
         //console.log(a);

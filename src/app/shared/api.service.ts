@@ -10,55 +10,55 @@ export class ApiService {
   constructor(private http : HttpClient) {}
 
     postEmployee(data :any){
-      return this.http.post<any>("http://localhost:3001/posts", data)
+      return this.http.post<any>("http://localhost:3002/posts", data)
       .pipe(map((res:any)=>{
         return res;
       }))
    }    
     getEmployee(){
-      return this.http.get<any>("http://localhost:3001/posts?_expand=department")
+      return this.http.get<any>("http://localhost:3002/posts?_expand=department")
       .pipe(map((res:any)=>{
        return res;
     }))
  }
     updateEmployee(data :any, id : number){
-      return this.http.put<any>("http://localhost:3001/posts/"+id, data)
+      return this.http.put<any>("http://localhost:3002/posts/"+id, data)
       .pipe(map((res:any)=>{
       return res;
       }))
    }
     deleteEmployee(id : number){
-      return this.http.delete<any>("http://localhost:3001/posts/"+id)
+      return this.http.delete<any>("http://localhost:3002/posts/"+id)
       .pipe(map((res:any)=>{
       return res;
     }))
  }
  getAllDepartments(){
-  return this.http.get<any>("http://localhost:3001/departments")
+  return this.http.get<any>("http://localhost:3002/departments")
   .pipe(map((res:any)=>{
    return res;
 }))
  }
  getEmployeeByDepartmentId(id:any){
-  return this.http.get<any>("http://localhost:3001/posts?departmentId=" +id)
+  return this.http.get<any>("http://localhost:3002/posts?departmentId=" +id)
   .pipe(map((res:any)=>{
    return res;
 }))
  }
  getAllAttendance(){
-  return this.http.get<any>("http://localhost:3001/attendance")
+  return this.http.get<any>("http://localhost:3002/attendance")
   .pipe(map((res:any)=>{
    return res;
 }))
  }
  postAttendance(data :any){
-  return this.http.post<any>("http://localhost:3001/attendance", data)
+  return this.http.post<any>("http://localhost:3002/attendance", data)
   .pipe(map((res:any)=>{
     return res;
   }))
 } 
 getAttendanceByEmpId(id:any){
-  return this.http.get<any>("http://localhost:3001/attendance?postId="+id)
+  return this.http.get<any>("http://localhost:3002/attendance?postId="+id)
   .pipe(map((res:any)=>{
    return res;
 }))
