@@ -9,6 +9,8 @@ export class ApiService {
 
   constructor(private http : HttpClient) {}
 
+  // local database call : http://localhost:3000/
+
     postEmployee(data :any){
       return this.http.post<any>("https://my-json-server.typicode.com/kozarkar/Attendance_Management_System/posts", data)
       .pipe(map((res:any)=>{
